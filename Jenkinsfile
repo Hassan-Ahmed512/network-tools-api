@@ -11,8 +11,8 @@ pipeline {
         stage('Setup Python') {
             steps {
                 bat 'python -m venv venv'
-                bat 'venv\\Scripts\\pip install --upgrade pip'
-                bat 'venv\\Scripts\\pip install flask pytest'
+                bat 'venv\\Scripts\\python.exe -m pip install --upgrade pip'
+                bat 'venv\\Scripts\\python.exe -m pip install flask pytest'
             }
         }
 
@@ -23,3 +23,4 @@ pipeline {
         }
     }
 }
+
